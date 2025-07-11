@@ -1,28 +1,33 @@
-name: Generate Snake
+name: Generate Snake Animation
 
+# Controls when the action will run
 on:
   schedule:
-    - cron: "0 12 * * *"
+    # Run every 6 hours
+    - cron: "0 */6 * * *"
   workflow_dispatch:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   generate:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     
     steps:
-      - name: Checkout
+      # Step 1: Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
         
-      - name: Generate Snake
-        uses: Platane/snk@v3
+      # Step 2: Generate snake SVG
+      - name: Generate snake.svg
+        uses: Platane/snk/svg-only@v3
         with:
           github_user_name: Gaurav-singh101
           outputs: dist/snake.svg
           
-      - name: Deploy
+      # Step 3: Deploy to output branch
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
