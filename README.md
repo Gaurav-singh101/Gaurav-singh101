@@ -134,14 +134,6 @@
 
 <br>
 
-## 🎵 Spotify Playing:
-
-<div align="center">
-  <img src="https://spotify-github-profile.vercel.app/api/spotify?background_color=0d1117&border_color=ffffff&limit=1" alt="Spotify Playing" width="350">
-</div>
-
-<br>
-
 ## 💡 Random Dev Quote:
 
 <div align="center">
@@ -168,7 +160,3 @@
   <h3>💫 Thanks for visiting my profile! Let's connect and build something amazing together! 💫</h3>
 </div>
 
-<div align="center">
-  <img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="Built with Love">
-  <img src="https://forthebadge.com/images/badges/powered-by-coffee.svg" alt="Powered by Coffee">
-</div>
