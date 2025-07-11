@@ -1,3 +1,4 @@
+![logo](https://github.com/Gaurav-singh101/Gaurav-singh101/blob/main/Gaurav.jpg)
 <h1 align="center">Hi 👋, I'm Gaurav Singh</h1>
 <h3 align="center">Full-stack developer with a strong foundation in JavaScript, React, Node.js,and AI/ML. I love turning ideas into real-world solutions through code.</h3>
 
