@@ -145,7 +145,7 @@
 ## 🐍 Snake eating my contributions:
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Gaurav-singh101/Gaurav-singh101/output/snake.svg" alt="Snake animation" />
+  <img src="./simple-snake.svg" alt="Snake animation" />
 </div>
 
 <br>
