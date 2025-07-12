@@ -13,15 +13,18 @@ jobs:
     timeout-minutes: 10
     
     steps:
+      # Using YOUR forked checkout action
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: Gaurav-singh101/checkout@v4
         
+      # Using YOUR forked snake action
       - name: Generate snake.svg
         uses: Gaurav-singh101/snk/svg-only@v3
         with:
           github_user_name: Gaurav-singh101
           outputs: dist/snake.svg
           
+      # Using YOUR forked github pages action
       - name: Deploy to GitHub Pages
         uses: Gaurav-singh101/ghaction-github-pages@v3.1.0
         with:
