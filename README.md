@@ -142,14 +142,6 @@
 
 <br>
 
-## 🐍 Snake eating my contributions:
-
-<div align="center">
-  <img src="./simple-snake.svg" alt="Snake animation" />
-</div>
-
-<br>
-
 ---
 
 <div align="center">
