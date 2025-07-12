@@ -1,30 +1,32 @@
-<svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .snake { fill: #39d353; }
-    .food { fill: #ff6b6b; }
-    @keyframes move {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(300px); }
-    }
-    .moving { animation: move 3s linear infinite; }
-  </style>
-  
-  <!-- Snake body -->
-  <g class="moving">
-    <rect class="snake" x="10" y="40" width="20" height="20" rx="2"/>
-    <rect class="snake" x="30" y="40" width="20" height="20" rx="2"/>
-    <rect class="snake" x="50" y="40" width="20" height="20" rx="2"/>
-    <rect class="snake" x="70" y="40" width="20" height="20" rx="2"/>
-  </g>
-  
-  <!-- Food -->
-  <circle class="food" cx="350" cy="50" r="8"/>
-  
-  <!-- Grid lines -->
-  <defs>
-    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e1e4e8" stroke-width="1"/>
-    </pattern>
-  </defs>
-  <rect width="400" height="100" fill="url(#grid)" opacity="0.3"/>
-</svg>
+name: Generate Snake Animation
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    steps:
+      - name: Checkout repository
+        uses: Gaurav-singh101/checkout@main
+        
+      - name: Generate snake.svg
+        uses: Gaurav-singh101/snk@main
+        with:
+          github_user_name: Gaurav-singh101
+          outputs: |
+            dist/snake.svg
+            dist/snake-dark.svg?palette=github-dark
+          
+      - name: Deploy to GitHub Pages
+        uses: Gaurav-singh101/ghaction-github-pages@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: output
