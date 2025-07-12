@@ -15,18 +15,20 @@ jobs:
     steps:
       # Using YOUR forked checkout action
       - name: Checkout repository
-        uses: Gaurav-singh101/checkout@v4
+        uses: Gaurav-singh101/checkout@main
         
       # Using YOUR forked snake action
       - name: Generate snake.svg
-        uses: Gaurav-singh101/snk/svg-only@v3
+        uses: Gaurav-singh101/snk@main
         with:
           github_user_name: Gaurav-singh101
-          outputs: dist/snake.svg
+          outputs: |
+            dist/snake.svg
+            dist/snake-dark.svg?palette=github-dark
           
       # Using YOUR forked github pages action
       - name: Deploy to GitHub Pages
-        uses: Gaurav-singh101/ghaction-github-pages@v3.1.0
+        uses: Gaurav-singh101/ghaction-github-pages@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
