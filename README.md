@@ -27,7 +27,7 @@
 
 - 🌱 I'm currently learning **AI-ML & DSA**
 
-- 👨‍💻 All of my projects are available at [**My Portfolio**](https://portfolio-tv89.onrender.com/)
+- 👨‍💻 All of my projects are available at [**My Portfolio**](https://gauravsingh.tech/)
 
 - 📫 How to reach me **gauravsingh74580@gmail.com**
 
