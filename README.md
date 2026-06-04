@@ -31,7 +31,7 @@
 
 - 📫 How to reach me **gauravsingh74580@gmail.com**
 
-- 📄 Know about my experiences [**My Resume**](https://drive.google.com/file/d/1kBa5_rHMSceGOlY7XigSwOTlUnfbb4fx/view?usp=drive_link)
+- 📄 Know about my experiences [**My Resume**](https://drive.google.com/file/d/1umfaFtZD5d-gGqlzIY3s9WJR_M26Fl-r/view?usp=sharing)
 
 - ⚡ Fun fact **I debug with console.log() and I'm proud of it!**
 
